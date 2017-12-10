@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="wind-para">
+      <UniqueIdentifier>{03c475c6-6108-475f-b853-39f7c50b0adb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="comman">
+      <UniqueIdentifier>{194d8e1e-5473-42ea-8513-78387ee50a92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="port">
+      <UniqueIdentifier>{c6c34264-4489-4bf7-8f4f-a194d09691aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_crc16.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_crc32.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_dlist.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_string.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\wind-para\para_dictionary.c">
+      <Filter>wind-para</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\wind-para\wind_para.c">
+      <Filter>wind-para</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\port\para_port.c">
+      <Filter>port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.c" />
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_debug.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\comman\wind_conv.c">
+      <Filter>comman</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_crc16.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_crc32.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_dlist.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_macro.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_string.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\wind-para\para_dictionary.h">
+      <Filter>wind-para</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\wind-para\wind_para.h">
+      <Filter>wind-para</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\port\wind_type.h">
+      <Filter>port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\port\para_port.h">
+      <Filter>port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_debug.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\comman\wind_conv.h">
+      <Filter>comman</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
