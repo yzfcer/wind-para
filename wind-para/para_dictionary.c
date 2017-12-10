@@ -143,49 +143,46 @@ void param_print(para_dic_s *dic)
     for(i = 0;i < count;i ++)
     {
         wind_printf("%s=",dic->item[i].name);
-        for(j = 0;j < dic->item[i].count;j ++)
+        switch(dic->item[i].type)
         {
-            switch(dic->item[i].type)
-            {
-                case TYPE_w_int8_t:
-                    print_int8_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_int16_t:
-                    print_int16_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_int32_t:
-                    print_int32_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_int64_t:
-                    print_int64_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_uint8_t:
-                    print_uint8_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_uint16_t:
-                    print_uint16_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_uint32_t:
-                    print_uint32_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_uint64_t:
-                    print_uint64_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_bool_t:
-                    print_bool_arr(&dic->item[i]);
-                    break;
-                case TYPE_w_str16_t:
-                case TYPE_w_str32_t:
-                case TYPE_w_str64_t:
-                case TYPE_w_str128_t:
-                case TYPE_w_str256_t:
-                    print_string_arr(&dic->item[i]);
-                    break;
-                default:
-                    wind_printf("undefined param type:%d\r\n",dic->item[i].type);
-                    break;
-            }
-            wind_printf("\r\n");
+            case TYPE_w_int8_t:
+                print_int8_arr(&dic->item[i]);
+                break;
+            case TYPE_w_int16_t:
+                print_int16_arr(&dic->item[i]);
+                break;
+            case TYPE_w_int32_t:
+                print_int32_arr(&dic->item[i]);
+                break;
+            case TYPE_w_int64_t:
+                print_int64_arr(&dic->item[i]);
+                break;
+            case TYPE_w_uint8_t:
+                print_uint8_arr(&dic->item[i]);
+                break;
+            case TYPE_w_uint16_t:
+                print_uint16_arr(&dic->item[i]);
+                break;
+            case TYPE_w_uint32_t:
+                print_uint32_arr(&dic->item[i]);
+                break;
+            case TYPE_w_uint64_t:
+                print_uint64_arr(&dic->item[i]);
+                break;
+            case TYPE_w_bool_t:
+                print_bool_arr(&dic->item[i]);
+                break;
+            case TYPE_w_str16_t:
+            case TYPE_w_str32_t:
+            case TYPE_w_str64_t:
+            case TYPE_w_str128_t:
+            case TYPE_w_str256_t:
+                print_string_arr(&dic->item[i]);
+                break;
+            default:
+                wind_printf("undefined param type:%d\r\n",dic->item[i].type);
+                break;
         }
+        wind_printf("\r\n");
     }
 }
