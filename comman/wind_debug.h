@@ -54,7 +54,7 @@ w_int32_t wind_printf(const char *fmt, ...);
 #define PRINT_LV_NOTICE  2
 #define PRINT_LV_WARN    3
 #define PRINT_LV_ERROR   4
-#define PRINT_LV_CRIT     5
+#define PRINT_LV_CRIT    5
 
 #define PRINT_LEVEL PRINT_LV_NOTICE
 

@@ -86,8 +86,8 @@ typedef char w_str64_t[64] ;
 typedef char w_str128_t[128] ;
 #endif
 
-#ifndef w_str156_t
-typedef char w_str156_t[128] ;
+#ifndef w_str256_t
+typedef char w_str256_t[256] ;
 #endif
 
 #ifndef __INLINE__
