@@ -51,14 +51,24 @@ typedef struct
     w_uint8_t type;
     w_uint8_t count;
     w_int16_t itemsize;
-    //w_uint16_t offset;
     void *ptr;
 }dic_item_s;
-#define MBR_OS(objtype,mbr) ((w_uint32_t)&(((objtype*)0)->mbr))
-#define PARAM_ITEM(objtype,obj,mbrtype,mbr) {#mbr,TYPE_##mbrtype,(w_uint8_t)(sizeof(obj.mbr)/sizeof(mbrtype)),sizeof(mbrtype),/*MBR_OS(objtype,mbr),*/&obj.mbr}
 
-w_bool_t param_set(dic_item_s *dic,w_int32_t count,char *name,void *value);
-w_bool_t param_get(dic_item_s *dic,w_int32_t count,char *name,void *value);
-void param_print(dic_item_s *dic,w_int32_t count);
+typedef struct
+{
+    char *name;
+    w_int32_t count;
+    dic_item_s *item;
+}para_dic_s;
+
+#define DICT_ITEM_START(tb_name) dic_item_s tb_name[] = {
+#define DICT_ITEM(objtype,obj,mbrtype,mbr) {#mbr,TYPE_##mbrtype,(w_uint8_t)(sizeof(obj.mbr)/sizeof(mbrtype)),sizeof(mbrtype),/*MBR_OS(objtype,mbr),*/&obj.mbr}
+#define DICT_ITEM_END };
+#define DICT_DEFINE(dic_name,tb_name) para_dic_s dic_name = {#dic_name,sizeof(tb_name)/sizeof(dic_item_s),tb_name};
+#define DICT_DECLARE(dic_name) extern para_dic_s dic_name
+
+w_bool_t param_set(para_dic_s *dic,char *name,void *value);
+w_bool_t param_get(para_dic_s *dic,char *name,void *value);
+void param_print(para_dic_s *dic);
 
 
